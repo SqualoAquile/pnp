@@ -1,7 +1,9 @@
 <?php $modulo = str_replace("-form", "", basename(__FILE__, ".php")) ?>
 <script type="text/javascript">
     var baselink = '<?php echo BASE_URL;?>',
-        currentModule = '<?php echo $modulo ?>'
+        currentModule = '<?php echo $modulo ?>',
+        campoPesquisa = '', // aqui vai o campo de id-usuario caso seja necessário filtrar o datatable somente para os registros referentes ao usuário logado
+        valorPesquisa = '<?php echo in_array('podetudo_ver', $_SESSION['permissoesUsuario']) ? "" : $_SESSION["idUsuario"]; ?>';
 </script>
 
 <!-- Chama o arquivo específico do módulo, caso não exista,  -->
@@ -41,7 +43,7 @@
 ?>
 
 <section class="mb-5">
-    <form id="form-principal<?php echo $formId ?>" method="POST" class="needs-validation" autocomplete="off" novalidate>
+    <form id="form-principal<?php echo $formId ?>" method="POST" class="needs-validation" autocomplete="off" novalidate enctype="multipart/form-data">
         <div class="row">
             <?php foreach ($colunas as $key => $value): ?>
                 <?php if(isset($value["Comment"]) && array_key_exists("form", $value["Comment"]) && $value["Comment"]["form"] != "false") : ?>

@@ -198,7 +198,7 @@
       <script src="<?php echo BASE_URL;?>/assets/js/vendor/loader.js" type="text/javascript"></script>
       <script src="<?php echo BASE_URL;?>/assets/js/vendor/Chart.bundle.min.js" type="text/javascript"></script>
       <!-- <script src="<?php echo BASE_URL?>/assets/js/vendor/jquery-ui.min.js" type="text/javascript"></script> -->
-      <script src="<?php echo BASE_URL?>/assets/js/validacoes.js" type="text/javascript"></script>
+      <!-- <script src="<?php echo BASE_URL?>/assets/js/validacoes.js" type="text/javascript"></script> -->
       <script src="<?php echo BASE_URL?>/assets/js/principal.js" type="text/javascript"></script>
       
    </head>
